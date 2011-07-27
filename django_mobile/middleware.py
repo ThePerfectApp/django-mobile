@@ -76,7 +76,7 @@ class MobileDetectionMiddleware(object):
 
         request.user_agent_is_mobile = False
         if is_mobile:
-            request.is_mobile = True
+            request.user_agent_is_mobile = True
             set_flavour(settings.DEFAULT_MOBILE_FLAVOUR, request)
         else:
             set_flavour(settings.FLAVOURS[0], request)
